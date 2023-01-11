@@ -1,0 +1,20 @@
+What is Caching ??
+
+Caching refer to storing the result , of an operation so that the future request return faster.
+
+When do we cache things?
+1.operation is slow
+2. operation runs multiple time
+3.operation output same for set of of input
+4.your hosting provider chargers for db access
+
+
+algo basic :
+
+    if request in cache:
+      return cache[request]    ########cache hit
+    else :
+      r=db_read()
+      cache[request]=r
+      return r                 ########cache miss
+      
